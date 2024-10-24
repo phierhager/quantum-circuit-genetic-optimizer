@@ -51,11 +51,7 @@ jobs:
       - name: Install Poetry Packages
         run: |
           poetry install
-      
-      - name: Activate Poetry Environment
-        run: |
-          poetry shell
 
       - name: Run tests
         run: |
-          pytest  # Run your tests
+          petry run pytest  # Run your tests
