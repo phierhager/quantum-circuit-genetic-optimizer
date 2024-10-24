@@ -54,4 +54,4 @@ jobs:
 
       - name: Run tests
         run: |
-          petry run pytest  # Run your tests
+          poetry run pytest  # Run your tests
