@@ -60,7 +60,9 @@ def run_genetic_algorithm(
     possible_cnot_pairs = generate_cnot_pairs(num_qubits)
 
     population = [
-        create_random_circuit_gene(num_qubits, possible_cnot_pairs, entanglement_chance)
+        create_random_circuit_gene(
+            num_qubits, possible_cnot_pairs, entanglement_chance
+        )
         for _ in range(population_size)
     ]
 

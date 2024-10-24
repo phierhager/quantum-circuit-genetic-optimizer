@@ -59,7 +59,9 @@ def select_gene_segment_from_parents(
         return gene_segment_1
     elif probability < crossover_probability:
         return gene_segment_2
-    elif probability < crossover_probability + (1 - 0.2) * (1 - crossover_probability):
+    elif probability < crossover_probability + (1 - 0.2) * (
+        1 - crossover_probability
+    ):
         return random.choice(possible_cnot_pairs)
     else:
         return None
@@ -73,7 +75,9 @@ def mutate_circuit_gene(
     """Perform mutation on the circuit gene."""
     return CircuitGene(
         gene=[
-            mutate_gene_segment(segment, possible_cnot_pairs, mutation_probability)
+            mutate_gene_segment(
+                segment, possible_cnot_pairs, mutation_probability
+            )
             for segment in circuit_gene
         ]
     )
@@ -86,7 +90,9 @@ def mutate_gene_segment(
 ) -> GeneSegment_T:
     """Mutate a single gene segment based on defined probabilities."""
     if segment is not None:
-        return mutate_segment(segment, possible_cnot_pairs, mutation_probability)
+        return mutate_segment(
+            segment, possible_cnot_pairs, mutation_probability
+        )
     else:
         return mutate_none_segment(possible_cnot_pairs, mutation_probability)
 
