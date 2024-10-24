@@ -1,0 +1,8 @@
+exclude = [
+    ".eggs",
+    "*.egg-info",
+    ".git"
+]
+
+line-length = 88 
+select = ["E", "F"] 

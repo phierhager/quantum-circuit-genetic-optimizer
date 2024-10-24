@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "quantum-circuit-genetic-optimizer"
+version = "0.1.0"
+description = "Genetic optimizer for quantum circuits"
+authors = ["Philip Hierhager <philip.hierhager@googlemail.com>"]
+license = "Apache 2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+qiskit = "^1.2.4"
+numpy = "^1.23"
+qiskit-algorithms = "^0.3.1"
+tqdm = "^4.66.5"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0"
+mypy = "^1.13.0"
+ruff = "^0.7.0"
+pre-commit = "^4.0.1"
+
+[tool.pytest.ini_options]
+addopts = "--maxfail=5 --disable-warnings -q"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
